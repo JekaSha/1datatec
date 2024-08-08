@@ -112,4 +112,4 @@ If you have any questions or suggestions, please contact me:
 
 ---
 
-This project demonstrates my skills in using Laravel to create scalable and efficient APIs. I aspire to work as a Full Stack Developer at 1datatec, using Laravel and Nuxt.js.
+This project demonstrates my skills in using Laravel to create scalable and efficient APIs. I aspire to work as a Full Stack Developer at 1datatec, using Laravel.
