@@ -17,8 +17,8 @@ This is a sample Laravel API demonstrating the use of job queues, database opera
 ## Installation
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/JekaSha/1datatec.git
+   cd 1datatec
    ```
 
 2. **Install dependencies:**
@@ -101,7 +101,7 @@ curl -X POST https://1datatec.12q.dev/api/submit \
 
 - **Listener**:
     - `ProcessSubmissionStatistics` handles the event and performs necessary logic (e.g., logging).
-
+ 
 ## Contact
 If you have any questions or suggestions, please contact me:
 
