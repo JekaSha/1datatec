@@ -1,0 +1,37 @@
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+/storage/framework/*
+/storage/logs/*
+/.env
+
+# Laravel & Lumen specific
+/bootstrap/cache
+/vendor/compiled.php
+.phpunit.result.cache
+
+# Laravel IDE Helper
+/_ide_helper.php
+/_ide_helper_models.php
+
+# Laravel package development
+/.vagrant
+Homestead.yaml
+Homestead.json
+
+# Nuxt.js dependencies
+.nuxt
+node_modules
+dist
+.env
+npm-debug.log
+yarn-error.log
+
+# Logs and dependencies
+.DS_Store
+*.log
+*.swp
+
+
