@@ -46,8 +46,10 @@ This is a sample Laravel API demonstrating the use of job queues, database opera
    DB_DATABASE=laravel_db
    DB_USERNAME=root
    DB_PASSWORD=secret
-   ```
+   
    QUEUE_CONNECTION=database
+   ```
+   
 
 6. **Run database migrations:**
    Execute the migrations to create the necessary tables:
