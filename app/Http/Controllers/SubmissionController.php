@@ -4,19 +4,30 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Jobs\ProcessSubmission;
+use App\Http\Requests\SubmissionRequest;
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Routing\ResponseFactory;
+
 
 class SubmissionController extends Controller
 {
-    public function submit(Request $request)
+    protected $response;
+    protected $dispatcher;
+    public function __construct(ResponseFactory $response, Dispatcher $dispatcher)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'message' => 'required|string',
-        ]);
+        $this->response = $response;
+        $this->dispatcher = $dispatcher;
+    }
+    public function submit(SubmissionRequest $request)
+    {
+        // Data is already validated by SubmissionRequest
+        $validated = $request->validated();
 
+        // Dispatch the job to the queue
         ProcessSubmission::dispatch($validated);
 
-        return response()->json(['message' => 'Submission queued successfully.'], 200);
+        // Return a response
+        return $this->response->json(['message' => 'Submission queued successfully.'], 200);
+
     }
 }
